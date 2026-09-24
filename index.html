@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A beautiful multi-time-zone digital clock." />
+  <title>World Clock</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">TIME AROUND THE WORLD</p>
+        <h1>World clock</h1>
+      </div>
+      <div class="live-indicator"><span></span> Live</div>
+    </header>
+
+    <section class="hero-card" aria-label="Local time">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR LOCAL TIME</p>
+        <div id="local-time" class="hero-time">--:--:--</div>
+        <p id="local-date" class="hero-date">Loading local date…</p>
+      </div>
+      <div class="sun-orbit" aria-hidden="true"><div class="sun"></div></div>
+    </section>
+
+    <section class="toolbar" aria-label="Clock controls">
+      <div class="section-heading">
+        <p class="eyebrow">SELECTED CITIES</p>
+        <h2>Everywhere, at a glance</h2>
+      </div>
+      <label class="toggle"><input id="format-toggle" type="checkbox" /><span class="toggle-track"></span><span>24-hour format</span></label>
+    </section>
+
+    <section id="clock-grid" class="clock-grid" aria-live="polite"></section>
+
+    <footer>
+      <span id="timezone-label">Detecting your timezone…</span>
+      <span class="footer-dot">•</span>
+      <span>Updated every second</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
